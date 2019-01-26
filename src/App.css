@@ -30,3 +30,10 @@
     transform: rotate(360deg);
   }
 }
+
+.card > .img-container {
+  height: 60%;
+  overflow: hidden;
+  text-align: center;
+  background:#6CADDC;
+}

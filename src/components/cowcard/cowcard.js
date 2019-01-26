@@ -1,5 +1,5 @@
 import React from "react";
-// import "./style.css";
+import "../cowcard"
 
 function CowCard(props) {
   return (
@@ -10,7 +10,7 @@ function CowCard(props) {
       <div className="content">
         <ul>
           <li>
-            <strong>Cow Type:</strong> {props.cow}
+            <strong>Cow Type:</strong> {props.breed}
           </li>
         </ul>
       </div>

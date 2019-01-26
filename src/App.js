@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+//import './App.css';
 import CowCard from "./components/cowcard/cowcard";
 import cows from "./cows.json"
 
