@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import CowCard from './components/cowcard/cowcard'
-import cows from './components/cowcard/cowcard'
+import CowCard from "./components/cowcard/cowcard";
+import cows from "./cows.json"
+
 
 class App extends Component {
   state = {
     message: "Click a cow to start!",
-    cows:cows,
+    cows,
   }
 
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
       <div className="All-cows">
                 {
                   
-                    this.state.cows(cows => (
+                    this.state.cows.map(cows => (
                         <CowCard
                             breed={cows.breed}
                             image={cows.image}
