@@ -13,6 +13,7 @@ class App extends Component {
     return (
       <div className="All-cows">
                 {
+                  
                     this.state.cows(cows => (
                         <CowCard
                             breed={cows.breed}
@@ -24,5 +25,5 @@ class App extends Component {
     );
   }
 }
-console.log("CowCard")
+console.log(CowCard)
 export default App;
