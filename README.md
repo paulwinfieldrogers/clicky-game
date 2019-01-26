@@ -1,6 +1,12 @@
+#New readme
+
+
 ##Checking github to see if issue is resolved
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App]
+
+
+(https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
