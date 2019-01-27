@@ -8,8 +8,9 @@ import Container from "./components/Container/Container"
 
 class App extends Component {
   state = {
-    instructions: "Click on a picture to begin",
+    message: "Click on a picture to begin |",
     yourScore: 0,
+    highScore: 0,
     cows: cows,
     unselectedCows: cows
   }
@@ -17,6 +18,7 @@ class App extends Component {
   componentDidMount() {
   }
 
+  //goes through the array of cows imported via the cows.json file and randomizes their order
   shuffleArray = array => {
     for (let i = array.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
@@ -28,10 +30,10 @@ class App extends Component {
     const findCow = this.state.unselectedCows.find(item => item.breed === breed);
 
     if (findCow === undefined) {
-      // success
+      // is your score higher than the current top score?  If yes set your score = top score
       this.setState({
-        message: "You guessed incorrectly!",
-        yourScore: (this.state.yourScore > this.state.yourScore) ? this.state.curScore : this.state.yourScore,
+        message: "You guessed incorrectly! |",
+        highScore: (this.state.yourScore > this.state.highScore) ? this.state.yourScore : this.state.highScore,
         yourScore: 0,
         cows: cows,
         unselectedCows: cows
@@ -39,10 +41,10 @@ class App extends Component {
     }
     else {
       // failure
-      const newCows = this.state.unselectedCows.filter(item => item.breed !== breed);
+      const newCows = this.state.unselectedCows.filter(type => type.breed !== breed);
 
       this.setState({
-        message: "You guessed correctly!",
+        message: "You guessed correctly! |",
         yourScore: this.state.yourScore + 1,
         cows: cows,
         unselectedCows: newCows
@@ -58,9 +60,9 @@ class App extends Component {
     return (
    <Container>
         <UserInfo
-          message={this.state.instructions}
-          yourScore={this.state.yourScore}
-          topScore={this.state.topScore}
+        message={this.state.message}
+         yourScore={this.state.yourScore}
+          highScore={this.state.highScore}
         />
    
         {

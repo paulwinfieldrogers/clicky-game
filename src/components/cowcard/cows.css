@@ -8,17 +8,21 @@
     box-shadow: 0 3px 6px brown, 0 3px 6px #999;
     text-align: left;
     display: inline-block;
+   
     
   }
   
   .card > .img-container {
-    height: 90%;
+    height: 100%;
     overflow: hidden;
     text-align: center;
     background: brown;
+    object-fit: contain;
+    background-size:10px;
   }
   .card > .img-container > img {
-    width: 90%
+    width: 90%;
+    object-fit: contain;
   }
   
   .card > .content {

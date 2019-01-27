@@ -12,7 +12,7 @@ const UserInfo = props => (
             >
                 {props.message}
             </li>
-            <li>Score: <span style={{color: "yellow"}}>{props.yourScore}</span> | Top Score: {props.topScore}</li>
+            <li>Score: <span style={{color: "blue"}}>{props.yourScore}</span> | Top Score: {props.highScore}</li>
         </ul>
     </div>
 );

@@ -18,9 +18,10 @@
   color: white;
 }
 
-/* .All-cows{
+.All-cows{
   background-color: red;
-} */
+  object-fit: contain;
+}
 
 .App-link {
   color: #61dafb;
@@ -40,4 +41,5 @@
   overflow: hidden;
   text-align: center;
   background:#6CADDC;
+  object-fit: contain;
 }
