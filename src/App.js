@@ -1,70 +1,77 @@
 import React, { Component } from 'react';
 //import './App.css';
-import CowCard from "./components/cowcard/cowcard";
+import CowCard from "./components/cowcard/CowCard";
 import cows from "./cows.json"
 
 
 class App extends Component {
   state = {
-      message: "Click an image to begin!",
-      topScore: 0,
-      curScore: 0,
-      cows: cows,
-      unselectedCows: cows
+    instructions: "Click on a picture to begin",
+    yourScore: 0,
+    yourScore: 0,
+    cows: cows,
+    unselectedCows: cows
   }
 
-componentDidMount() {
-}
+  componentDidMount() {
+  }
 
-shuffleArray = array => {
+  shuffleArray = array => {
     for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
-}
-selectCow = breed => {
+  }
+
+  selectCow = breed => {
     const findCow = this.state.unselectedCows.find(item => item.breed === breed);
 
-    if(findCow === undefined) {
-        // failure to select a new dog
-        this.setState({ 
-            message: "You guessed incorrectly!",
-            topScore: (this.state.curScore > this.state.topScore) ? this.state.curScore : this.state.topScore,
-            curScore: 0,
-            cows: cows,
-            unselectedCows: cows
-        });
+    if (findCow === undefined) {
+      // success
+      this.setState({
+        message: "You guessed incorrectly!",
+        yourScore: (this.state.curScore > this.state.yourScore) ? this.state.curScore : this.state.yourScore,
+        curScore: 0,
+        cows: cows,
+        unselectedCows: cows
+      });
     }
     else {
-        // success to select a new dog
-        const newCows = this.state.unselectedCowss.filter(item => item.breed !== breed);
-        
-        this.setState({ 
-            message: "You guessed correctly!",
-            curScore: this.state.curScore + 1,
-          cows: cows,
-            unselectedCows: newCows
-        });
+      // failure
+      const newCows = this.state.unselectedCows.filter(item => item.breed !== breed);
+
+      this.setState({
+        message: "You guessed correctly!",
+        curScore: this.state.curScore + 1,
+        cows: cows,
+        unselectedCows: newCows
+      });
     }
 
     this.shuffleArray(cows);
-};
+  };
+
+
+
   render() {
     return (
       <div className="All-cows">
-                {
-                  
-                    this.state.cows.map(cows => (
-                        <CowCard
-                            breed={cows.breed}
-                            image={cows.image}
-                        />
-                    ))
-                }
+        {
+
+          this.state.cows.map(cows => (
+            <CowCard
+              instructions={this.state.instructions}
+              key={cows.id}
+              breed={cows.breed}
+              image={cows.image}
+              selectCow={this.selectCow}
+            />
+          ))
+        }
       </div>
     );
   }
 }
-console.log(CowCard)
-export default App;
 
+
+export default App;
