@@ -10,7 +10,7 @@ When starting the screen looks as follows:
 
 ![ScreenShot](https://github.com/paulwinfieldrogers/clicky-game/blob/master/cow1.png)
 
-Once you start playing your score will increment if you pass the value of 3 (in this example your score will be the new high score noted).
+Once you start playing your score will increment if you pass the value of 3 (in this example) your score will be the new high score noted.
 
 ![ScreenShot](https://github.com/paulwinfieldrogers/clicky-game/blob/master/cow2.png)
 
