@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 //import './App.css';
 import CowCard from "./components/cowcard/CowCard";
 import cows from "./cows.json"
+import UserInfo from './components/UserInfo/UserInfo';
+import Container from "./components/Container/Container"
 
 
 class App extends Component {
   state = {
     instructions: "Click on a picture to begin",
-    yourScore: 0,
     yourScore: 0,
     cows: cows,
     unselectedCows: cows
@@ -30,8 +31,8 @@ class App extends Component {
       // success
       this.setState({
         message: "You guessed incorrectly!",
-        yourScore: (this.state.curScore > this.state.yourScore) ? this.state.curScore : this.state.yourScore,
-        curScore: 0,
+        yourScore: (this.state.yourScore > this.state.yourScore) ? this.state.curScore : this.state.yourScore,
+        yourScore: 0,
         cows: cows,
         unselectedCows: cows
       });
@@ -42,7 +43,7 @@ class App extends Component {
 
       this.setState({
         message: "You guessed correctly!",
-        curScore: this.state.curScore + 1,
+        yourScore: this.state.yourScore + 1,
         cows: cows,
         unselectedCows: newCows
       });
@@ -55,23 +56,28 @@ class App extends Component {
 
   render() {
     return (
-      <div className="All-cows">
+   <Container>
+        <UserInfo
+          message={this.state.instructions}
+          yourScore={this.state.yourScore}
+          topScore={this.state.topScore}
+        />
+   
         {
-
           this.state.cows.map(cows => (
             <CowCard
-              instructions={this.state.instructions}
-              key={cows.id}
               breed={cows.breed}
               image={cows.image}
               selectCow={this.selectCow}
+              yourScore={this.state.yourScore}
             />
           ))
         }
-      </div>
+   </Container>
     );
   }
 }
+
 
 
 export default App;
