@@ -8,8 +8,11 @@ Once the user's score is reset after an incorrect guess, the game restarts.
 
 When starting the screen looks as follows:
 
-![ScreenShot](../cow1.png)
+![ScreenShot](clicky-game/cow1.png)
 
 Once you start playing your score will increment if you pass the value of 3 (in this example your score will be the new high score).
 
-![ScreenShot](cow2.png)
+![ScreenShot](clicky-game/cow1.png)
+
+
+https://github.com/paulwinfieldrogers/clicky-game/raw/cow1.png
