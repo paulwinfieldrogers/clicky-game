@@ -1,30 +1,30 @@
 [
     {
-        "breed": "holstein",
+        "breed": "Holstein",
         "image": "https://i1.wp.com/www.dairymoos.com/wp-content/uploads/2016/03/Holstein.jpg"
     },
     {
-        "breed": "jersey",
+        "breed": "Jersey",
         "image": "https://i0.wp.com/www.dairymoos.com/wp-content/uploads/2016/03/Jersey.jpg"
     },
 
     {
-        "breed": "brown-swiss",
+        "breed": "Brown-Swiss",
         "image": "https://i0.wp.com/www.dairymoos.com/wp-content/uploads/2016/03/Brown-Swiss.jpg"
 
     },
     {
-        "breed": "guernsey",
+        "breed": "Guernsey",
         "image": "https://i2.wp.com/www.dairymoos.com/wp-content/uploads/2016/03/Guernsey.jpg"
     },
 
     {
-        "breed": "ayrshire",
+        "breed": "Ayrshire",
         "image": "https://i2.wp.com/www.dairymoos.com/wp-content/uploads/2016/03/Ayrshire.jpg"
     },
 
     {
-        "breed":"milking-shorthorn",
+        "breed":"Milking-Hhorthorn",
         "image":"https://i0.wp.com/www.dairymoos.com/wp-content/uploads/2016/03/Milking-Shorthorn.jpg"
 
     }
