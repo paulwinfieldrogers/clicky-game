@@ -4,6 +4,7 @@ import CowCard from "./components/cowcard/CowCard";
 import cows from "./cows.json"
 import UserInfo from './components/UserInfo/UserInfo';
 import Container from "./components/Container/Container"
+import NavBar from "./components/Navbar/Navbar"
 
 
 class App extends Component {
@@ -59,6 +60,7 @@ class App extends Component {
   render() {
     return (
    <Container>
+     <NavBar></NavBar>
         <UserInfo
         message={this.state.message}
          yourScore={this.state.yourScore}

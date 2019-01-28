@@ -2,8 +2,8 @@
   "name": "clicky-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://paulwinfieldrogers.github.io/clicky-game/",
   "dependencies": {
-    "homepage": "https://paulwinfieldrogers.github.io/clicky-game/",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
